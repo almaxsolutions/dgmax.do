@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1KKZGG1FZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G1KKZGG1FZ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGMax - Facturación Electrónica para República Dominicana</title>
-    <meta name="description" content="Sistema de facturación electrónica (e-CF) para empresas dominicanas. Integración directa con DGII, firma digital y cumplimiento fiscal automatizado.">
+    <!-- Primary Meta Tags -->
+    <title>DGMax - Facturación Electrónica e-CF para República Dominicana | Desde $35/mes</title>
+    <meta name="description" content="Sistema de facturación electrónica certificado por DGII. Emite todos los e-CF (E31-E47), firma digital automática, recepción ARECF/ACECF, y certificación guiada. API para desarrolladores. Prueba gratis 14 días.">
+    <meta name="keywords" content="facturación electrónica, e-CF, DGII, comprobante fiscal electrónico, República Dominicana, factura electrónica RD, Ley 32-23, emisor electrónico, API facturación">
+    <meta name="author" content="DGMax">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dgmax.do/">
+    <meta name="language" content="es-DO">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgmax.do/">
+    <meta property="og:title" content="DGMax - Facturación Electrónica e-CF sin complicaciones">
+    <meta property="og:description" content="Sistema completo de facturación electrónica para empresas dominicanas. Integración DGII, firma digital, certificación guiada. Desde $35/mes.">
+    <meta property="og:image" content="https://dgmax.do/assets/og-image.png">
+    <meta property="og:locale" content="es_DO">
+    <meta property="og:site_name" content="DGMax">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DGMax - Facturación Electrónica e-CF para República Dominicana">
+    <meta name="twitter:description" content="Emite e-CF, firma digital automática, recepción y certificación guiada. API para desarrolladores. Prueba gratis.">
+    <meta name="twitter:image" content="https://dgmax.do/assets/og-image.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -315,6 +344,129 @@
             50% { opacity: 0.5; }
         }
     </style>
+
+    <!-- Software Application Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DGMax",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://dgmax.do",
+      "description": "Sistema de facturación electrónica e-CF para República Dominicana. Emisión, recepción, firma digital y certificación ante la DGII.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "35",
+        "highPrice": "95",
+        "priceCurrency": "USD",
+        "offerCount": "3"
+      },
+      "featureList": [
+        "Emisión de todos los tipos de e-CF (E31-E47)",
+        "Firma digital automática con certificado X.509",
+        "Recepción de e-CF con ARECF y ACECF",
+        "Certificación guiada ante DGII",
+        "API completa para integraciones",
+        "Multi-empresa nativo"
+      ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DGMax",
+      "url": "https://dgmax.do",
+      "logo": "https://dgmax.do/assets/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@dgmax.do",
+        "contactType": "sales"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santo Domingo",
+        "addressCountry": "DO"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para comenzar con facturación electrónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo necesitas tu RNC activo, un certificado digital válido emitido por una entidad certificadora autorizada (como Viafirma o Cámara de Comercio de Santo Domingo), y estar registrado como emisor electrónico ante la DGII. DGMax te guía en todo el proceso de certificación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La prueba gratis tiene limitaciones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, tienes acceso completo a todas las funcionalidades durante 14 días. No requerimos tarjeta de crédito. Puedes emitir comprobantes en ambiente de prueba de DGII."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona la integración con mi sistema actual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DGMax ofrece una API completa con documentación detallada. Puedes integrar con cualquier ERP o sistema (Odoo, SAP, .NET, PHP, Python) usando nuestra API REST. Los documentos nunca se bloquean, incluso si excedes tu plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mis datos están seguros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usamos encriptación SSL de 256 bits, almacenamiento seguro en la nube con backups automáticos. Tu certificado digital se almacena de forma encriptada. Cumplimos con el requisito de la DGII de conservar documentos por 10 años."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si excedo mi límite de documentos mensuales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los documentos nunca se bloquean en DGMax. Usamos límites soft, lo que significa que tu facturación nunca se detiene. Si excedes tu plan, los documentos siguen procesándose normalmente. Esto es crítico porque bloquear comprobantes fiscales detendría las operaciones de tu negocio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la fecha límite para implementar facturación electrónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Según la Ley 32-23, las PyMEs, microempresas y contribuyentes no clasificados tienen hasta el 15 de mayo de 2026. Los grandes contribuyentes locales y medianos tienen hasta el 15 de noviembre de 2025. DGMax ofrece certificación guiada para cumplir antes del plazo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo es obligatoria la facturación electrónica para mi empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Ley 32-23 establece fechas según el tamaño del contribuyente. Los grandes contribuyentes nacionales ya están obligados desde 2024. Los grandes locales y medianos tienen hasta noviembre 2025. Las PyMEs, microempresas y no clasificados tienen hasta el 15 de mayo de 2026. DGMax te ayuda a certificarte antes de tu fecha límite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si la DGII está caída cuando necesito facturar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DGMax incluye un sistema de cola automática con reintentos. Si la DGII no está disponible, tus documentos se firman y almacenan localmente, y se envían automáticamente cuando el servicio se restablece. Tu operación nunca se detiene."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="bg-midnight-900 text-white antialiased overflow-x-hidden">
@@ -337,6 +489,7 @@
                 <div class="hidden md:flex items-center gap-10">
                     <a href="#features" class="nav-link text-gray-300 hover:text-white transition-colors">Características</a>
                     <a href="#pricing" class="nav-link text-gray-300 hover:text-white transition-colors">Precios</a>
+                    <a href="/blog/" class="nav-link text-gray-300 hover:text-white transition-colors">Blog</a>
                     <a href="#faq" class="nav-link text-gray-300 hover:text-white transition-colors">FAQ</a>
                     <a href="#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contacto</a>
                 </div>
@@ -378,8 +531,14 @@
                     </h1>
 
                     <p class="text-xl text-gray-400 max-w-xl leading-relaxed">
-                        Sistema completo de e-CF para empresas dominicanas. Integración directa con DGII, firma digital automática y cumplimiento fiscal garantizado.
+                        Sistema completo de comprobantes fiscales electrónicos (e-CF) para empresas dominicanas. Integración directa con DGII, firma digital automática y cumplimiento con la Ley 32-23 garantizado.
                     </p>
+
+                    <!-- Urgency banner -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                        <span class="text-amber-400 text-lg">&#9200;</span>
+                        <span class="text-amber-300 font-medium text-sm">Fecha límite PyMEs: 15 de mayo 2026 — <a href="mailto:info@dgmax.do?subject=Quiero%20certificarme%20como%20emisor%20electrónico" class="underline hover:text-amber-200">Certifícate ahora con DGMax</a></span>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
                         <a href="mailto:info@dgmax.do?subject=Quiero%20comenzar%20con%20DGMax" class="btn-primary bg-gradient-to-r from-amber-500 to-amber-600 text-midnight-900 px-8 py-4 rounded-xl font-semibold text-lg text-center">
@@ -544,7 +703,7 @@
                     </div>
                     <h3 class="font-display text-xl font-semibold mb-3">Emisión de e-CF</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Genera todos los tipos de comprobantes: facturas, notas de crédito, notas de débito y más. Envío automático a DGII.
+                        Genera todos los comprobantes fiscales electrónicos (E31 a E47) requeridos por la DGII. Facturas, notas de crédito, notas de débito y más con envío automático.
                     </p>
                 </div>
 
@@ -555,9 +714,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display text-xl font-semibold mb-3">Firma Digital</h3>
+                    <h3 class="font-display text-xl font-semibold mb-3">Firma Digital Automática</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Firma automática con tu certificado digital. Almacenamiento seguro y renovación simplificada.
+                        Firma con tu certificado digital X.509 sin intervención manual. Almacenamiento seguro y renovación simplificada.
                     </p>
                 </div>
 
@@ -570,7 +729,7 @@
                     </div>
                     <h3 class="font-display text-xl font-semibold mb-3">Recepción de e-CF</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Recibe comprobantes de tus proveedores. Genera ARECF y ACECF automáticamente según normativa.
+                        Recibe comprobantes de tus proveedores. Genera ARECF (acuse de recibo) y ACECF (aprobación comercial) automáticamente según normativa.
                     </p>
                 </div>
 
@@ -581,9 +740,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display text-xl font-semibold mb-3">Integración API</h3>
+                    <h3 class="font-display text-xl font-semibold mb-3">API para Desarrolladores</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        API completa para integrar con tu sistema contable o ERP. Documentación detallada y soporte en la integración.
+                        Integra con cualquier ERP — Odoo, SAP, .NET, PHP, Python. Documentación completa y SDK disponible para emisores electrónicos.
                     </p>
                 </div>
 
@@ -607,9 +766,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-display text-xl font-semibold mb-3">Multi-Empresa</h3>
+                    <h3 class="font-display text-xl font-semibold mb-3">Multi-Empresa Nativo</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Administra múltiples RNC desde una sola cuenta. Ideal para contadores y grupos empresariales.
+                        Administra múltiples RNC desde una sola cuenta. Ideal para contadores, integradores y grupos empresariales.
                     </p>
                 </div>
             </div>
@@ -916,6 +1075,30 @@
                         Sí, puedes cancelar tu suscripción en cualquier momento sin penalidades. Tendrás acceso hasta el final de tu período de facturación actual y podrás exportar todos tus datos.
                     </div>
                 </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden fade-in fade-in-delay-6">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center">
+                        <span class="font-display font-semibold text-lg">¿Cuándo es obligatoria la facturación electrónica para mi empresa?</span>
+                        <svg class="faq-icon w-5 h-5 text-amber-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 text-gray-400">
+                        La Ley 32-23 establece fechas según el tamaño del contribuyente. Los grandes contribuyentes nacionales ya están obligados desde 2024. Los grandes locales y medianos tienen hasta noviembre 2025. Las PyMEs, microempresas y no clasificados tienen hasta el 15 de mayo de 2026. DGMax te ayuda a certificarte antes de tu fecha límite.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden fade-in fade-in-delay-6">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center">
+                        <span class="font-display font-semibold text-lg">¿Qué pasa si la DGII está caída cuando necesito facturar?</span>
+                        <svg class="faq-icon w-5 h-5 text-amber-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 text-gray-400">
+                        DGMax incluye un sistema de cola automática con reintentos. Si la DGII no está disponible, tus documentos se firman y almacenan localmente, y se envían automáticamente cuando el servicio se restablece. Tu operación nunca se detiene.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -993,14 +1176,15 @@
                     </ul>
                 </div>
 
-                <!-- Support -->
+                <!-- Recursos -->
                 <div>
-                    <h4 class="font-display font-semibold mb-6">Soporte</h4>
+                    <h4 class="font-display font-semibold mb-6">Recursos</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Centro de Ayuda</a></li>
+                        <li><a href="/blog/" class="text-gray-400 hover:text-amber-400 transition-colors">Blog</a></li>
+                        <li><a href="/blog/guia-facturacion-electronica-rd.html" class="text-gray-400 hover:text-amber-400 transition-colors">Guía Facturación Electrónica</a></li>
+                        <li><a href="/blog/como-certificarse-emisor-electronico-dgii.html" class="text-gray-400 hover:text-amber-400 transition-colors">Cómo Certificarte</a></li>
+                        <li><a href="/blog/api-facturacion-electronica-desarrolladores.html" class="text-gray-400 hover:text-amber-400 transition-colors">API para Desarrolladores</a></li>
                         <li><a href="#faq" class="text-gray-400 hover:text-amber-400 transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Documentación API</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Estado del Servicio</a></li>
                     </ul>
                 </div>
 

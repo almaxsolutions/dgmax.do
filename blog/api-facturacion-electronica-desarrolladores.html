@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1KKZGG1FZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G1KKZGG1FZ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Facturación Electrónica para Desarrolladores — Integración e-CF DGII</title>
+    <meta name="description" content="Integra facturación electrónica e-CF en tu sistema con la API de DGMax. Compatible con Python, PHP, .NET, Node.js. Documentación completa y SDK disponible.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dgmax.do/blog/api-facturacion-electronica-desarrolladores.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dgmax.do/blog/api-facturacion-electronica-desarrolladores.html">
+    <meta property="og:title" content="API de Facturación Electrónica para Desarrolladores — Integración e-CF DGII">
+    <meta property="og:description" content="Integra facturación electrónica e-CF en tu sistema con la API de DGMax. Compatible con Python, PHP, .NET, Node.js.">
+    <meta property="og:locale" content="es_DO">
+    <meta property="og:site_name" content="DGMax">
+    <meta property="article:published_time" content="2026-02-21">
+    <meta property="article:author" content="DGMax">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "API de Facturación Electrónica para Desarrolladores — Integración e-CF DGII",
+        "description": "Integra facturación electrónica e-CF en tu sistema con la API de DGMax. Compatible con Python, PHP, .NET, Node.js. Documentación completa y SDK disponible.",
+        "datePublished": "2026-02-21",
+        "author": {
+            "@type": "Organization",
+            "name": "DGMax",
+            "url": "https://dgmax.do"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DGMax",
+            "url": "https://dgmax.do"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dgmax.do/blog/api-facturacion-electronica-desarrolladores.html"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        midnight: {
+                            900: '#0a0e1a',
+                            800: '#0f1629',
+                            700: '#151d35',
+                            600: '#1c2541',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Sora', sans-serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0e1a; }
+        ::-webkit-scrollbar-thumb { background: #1c2541; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(245, 158, 11, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #f59e0b, #14b8a6);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-midnight-900 text-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">DGMax</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="/#features" class="nav-link text-gray-300 hover:text-white transition-colors">Características</a>
+                    <a href="/#pricing" class="nav-link text-gray-300 hover:text-white transition-colors">Precios</a>
+                    <a href="/blog/" class="nav-link text-white transition-colors">Blog</a>
+                    <a href="/#faq" class="nav-link text-gray-300 hover:text-white transition-colors">FAQ</a>
+                    <a href="/#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://app.dgmax.do/?utm_source=landing&utm_medium=nav&utm_campaign=login" class="hidden sm:block text-gray-300 hover:text-white transition-colors">Iniciar Sesión</a>
+                    <a href="mailto:info@dgmax.do?subject=Quiero%20comenzar%20con%20DGMax" class="btn-primary bg-gradient-to-r from-amber-500 to-amber-600 text-midnight-900 px-6 py-2.5 rounded-xl font-semibold">
+                        Comenzar Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="pt-32 pb-12">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-6">
+                <a href="/blog/" class="text-gray-400 hover:text-amber-400 transition-colors text-sm">&larr; Blog</a>
+                <span class="text-gray-600">|</span>
+                <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Desarrolladores</span>
+                <span class="text-sm text-gray-500">Febrero 2026</span>
+            </div>
+            <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                API de Facturación Electrónica para Desarrolladores — <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">Integración e-CF DGII</span>
+            </h1>
+            <p class="text-xl text-gray-400">
+                Integra facturación electrónica e-CF en tu sistema con la API de DGMax. Compatible con Python, PHP, .NET, Node.js.
+            </p>
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <section class="pb-24">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+            <!-- Section 1 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">¿Por qué una API para facturación electrónica?</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La mayoría de las empresas dominicanas ya cuentan con un sistema para gestionar su operación: un ERP, un punto de venta, un sistema contable desarrollado a medida, o incluso hojas de cálculo conectadas a bases de datos. Cuando la DGII exige facturación electrónica, la pregunta natural es: ¿tengo que reemplazar todo lo que ya funciona?
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La respuesta es no. Un enfoque API-first permite que cualquier sistema existente adquiera capacidad de emisión de comprobantes fiscales electrónicos (e-CF) sin modificar su lógica de negocio. Tu sistema sigue generando las facturas como siempre; la API se encarga de convertirlas en documentos electrónicos válidos ante la DGII.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Esto es especialmente relevante para dos perfiles: las software houses que desarrollan soluciones para múltiples clientes y necesitan una integración reutilizable, y los integradores que conectan sistemas heterogéneos dentro de una misma empresa o grupo corporativo. En ambos casos, una API bien diseñada elimina la necesidad de implementar la complejidad del protocolo e-CF en cada proyecto.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Construir la capa de facturación electrónica internamente implica dominar la generación de XML según los esquemas XSD de la DGII, la firma digital con certificados P12, el envío SOAP al servicio de recepción, el manejo de estados asincrónicos, y la recepción de documentos de terceros. Es un esfuerzo significativo que no genera valor diferencial para tu producto. Una API lo abstrae por completo.
+            </p>
+
+            <!-- Section 2 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">La API de DGMax</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                DGMax expone una API RESTful que cubre el ciclo completo del comprobante fiscal electrónico. El flujo es directo: tu sistema envía un JSON con los datos de la factura, y DGMax se encarga del resto: genera el XML conforme al XSD vigente, aplica la firma digital con el certificado de tu empresa, envía el documento a la DGII, y te devuelve el resultado con el e-NCF asignado y el estado de recepción.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Todos los tipos de documentos electrónicos están soportados: facturas de crédito fiscal (E31), facturas de consumo (E32), notas de débito (E33), notas de crédito (E34), compras (E41), gastos menores (E43), pagos al exterior (E44), y comprobantes de regímenes especiales (E45, E46, E47). También se maneja la recepción de documentos de otros emisores, generando automáticamente los acuses ARECF y ACECF que exige la DGII.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La autenticación se realiza mediante API keys asociadas a cada empresa. Cada solicitud se autentica con un token en el header, lo que facilita la integración en cualquier entorno: servidores, funciones serverless, scripts de migración, o procesos batch automatizados.
+            </p>
+
+            <!-- Section 3 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">Ejemplo de integración</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Emitir un comprobante fiscal electrónico a través de la API requiere una sola solicitud HTTP. Tu sistema construye un JSON con los datos comerciales de la transacción y DGMax transforma eso en un e-CF válido. El siguiente ejemplo ilustra la estructura de la solicitud:
+            </p>
+
+            <div class="bg-midnight-800 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
+<pre>POST /api/v1/documents
+Authorization: Bearer tu_api_key
+
+{
+  "document_type": "E31",
+  "buyer_rnc": "101234567",
+  "items": [
+    {
+      "description": "Servicio de consultoría",
+      "quantity": 1,
+      "unit_price": 50000.00,
+      "itbis_rate": 18
+    }
+  ],
+  "payment": {
+    "method": "credit",
+    "term_days": 30
+  }
+}</pre>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La respuesta incluye toda la información que tu sistema necesita para actualizar sus registros:
+            </p>
+
+            <div class="bg-midnight-800 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
+<pre>{
+  "encf": "E310000000001",
+  "status": "accepted",
+  "dgii_received_at": "2026-02-21T14:30:00",
+  "signed_xml_url": "https://storage.dgmax.do/docs/...",
+  "tracking_number": "DGM-2026-00042"
+}</pre>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Detrás de esa solicitud, DGMax ejecuta varios pasos de forma transparente: valida los datos contra las reglas de negocio de la DGII, genera el XML según el esquema XSD correspondiente al tipo de documento, aplica la firma digital con el certificado P12 de tu empresa, envía el documento al servicio de recepción de la DGII, y espera la confirmación. Todo esto ocurre en segundos y sin intervención adicional de tu sistema.
+            </p>
+
+            <!-- Section 4 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">Compatibilidad</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La API de DGMax funciona con cualquier lenguaje de programación o plataforma que pueda realizar solicitudes HTTP. No hay dependencia de un stack tecnológico específico. Si tu sistema puede enviar un POST con un cuerpo JSON y leer la respuesta, puede emitir comprobantes electrónicos.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Esto incluye los lenguajes más comunes en el ecosistema de desarrollo dominicano: <strong class="text-white">Python</strong>, <strong class="text-white">PHP</strong>, <strong class="text-white">.NET (C#)</strong>, <strong class="text-white">Node.js</strong>, <strong class="text-white">Java</strong>, <strong class="text-white">Ruby</strong>, y <strong class="text-white">Go</strong>. También funciona desde herramientas low-code como Zapier, Make, o Power Automate, y desde cualquier plataforma que soporte webhooks o integraciones HTTP.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Para desarrolladores Python, DGMax ofrece <strong class="text-white">dgmaxclient</strong>, un SDK nativo que encapsula las llamadas a la API en métodos idiomáticos de Python. En lugar de construir solicitudes HTTP manualmente, puedes emitir documentos con llamadas como <code class="bg-midnight-800 px-2 py-0.5 rounded text-amber-400">client.documents.create(data)</code>. El SDK maneja autenticación, serialización, reintentos y manejo de errores automáticamente.
+            </p>
+
+            <!-- Section 5 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">Límites soft: tu facturación nunca se detiene</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Un problema frecuente con las APIs de facturación electrónica es el comportamiento cuando se alcanza el límite mensual de documentos del plan contratado. Muchos proveedores implementan un bloqueo duro (hard limit): al documento número 801, si tu plan incluye 800, la solicitud falla con un error 429 y tu sistema deja de poder facturar.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Esto es especialmente peligroso en integraciones automatizadas. Si tu ERP envía facturas a la API en un proceso batch nocturno y una solicitud es rechazada, el error puede cascadear: la factura queda sin e-NCF, el cliente no recibe su comprobante, y la contabilidad se desincroniza. Peor aún si el bloqueo ocurre un viernes por la noche y nadie lo detecta hasta el lunes.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                DGMax utiliza <strong class="text-white">límites soft</strong>. Si excedes la asignación mensual de tu plan, los documentos se siguen procesando normalmente. No hay interrupción, no hay errores, no hay facturas perdidas. El excedente se factura según las tarifas de tu plan, y recibes una notificación para que puedas evaluar si conviene ajustar tu suscripción. La facturación de tu empresa nunca se detiene por un límite artificial.
+            </p>
+
+            <!-- Section 6 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">Multi-empresa vía API</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Una sola integración con la API de DGMax puede gestionar múltiples empresas (RNCs). Cada empresa tiene su propio certificado digital, su configuración fiscal, y sus secuencias de e-NCF, pero todas se administran desde la misma conexión API.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Este modelo es ideal para tres escenarios comunes. Primero, las <strong class="text-white">software houses</strong> que desarrollan un sistema y lo despliegan para múltiples clientes: en lugar de configurar una integración de facturación electrónica para cada cliente, integran una vez contra DGMax y crean empresas adicionales vía API. Segundo, las <strong class="text-white">firmas contables</strong> que gestionan la facturación de decenas de clientes: un solo dashboard para monitorear el estado de emisión de todos los RNCs. Tercero, los <strong class="text-white">grupos corporativos</strong> con múltiples razones sociales que necesitan consolidar la facturación electrónica bajo una sola plataforma.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                La separación entre empresas es estricta: cada RNC opera de forma independiente con su propio certificado, sus documentos, y su historial. No hay riesgo de mezcla de datos entre entidades.
+            </p>
+
+            <!-- Section 7 -->
+            <h2 class="font-display text-2xl font-semibold mb-4 mt-10">Empieza a integrar hoy</h2>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                El proceso para comenzar a usar la API de DGMax es inmediato. Crea una cuenta, obtén tus credenciales API, y empieza a enviar documentos de prueba en el entorno de certificación de la DGII. La prueba gratuita de 14 días incluye acceso completo a la API, todos los tipos de documentos, y soporte técnico para tu integración.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Durante el período de prueba puedes enviar documentos al entorno de pruebas de la DGII (TesteCF), validar que tu integración genera los e-CF correctamente, y completar el set de pruebas requerido para la certificación. Una vez certificado, el cambio a producción es un ajuste de configuración: misma API, mismos endpoints, diferente ambiente.
+            </p>
+
+            <!-- CTA -->
+            <div class="glass-card rounded-2xl p-8 text-center mt-12">
+                <h3 class="font-display text-2xl font-semibold mb-3">¿Listo para integrar facturación electrónica?</h3>
+                <p class="text-gray-400 mb-6">DGMax ofrece una API completa con documentación detallada. Prueba gratis por 14 días.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:info@dgmax.do?subject=Quiero%20integrar%20DGMax%20via%20API" class="btn-primary bg-gradient-to-r from-amber-500 to-amber-600 text-midnight-900 px-8 py-3 rounded-xl font-semibold">Solicitar Acceso API</a>
+                    <a href="/#pricing" class="border border-white/10 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/5 transition-all">Ver Precios</a>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-16">
+                <h3 class="font-display text-xl font-semibold mb-6">Artículos relacionados</h3>
+                <div class="space-y-4">
+                    <a href="/blog/guia-facturacion-electronica-rd.html" class="glass-card rounded-2xl p-6 block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">Guía</span>
+                        </div>
+                        <h4 class="font-display text-lg font-semibold mb-1">Guía Completa: Facturación Electrónica en República Dominicana 2026</h4>
+                        <p class="text-gray-400 text-sm">Todo lo que tu empresa necesita saber sobre facturación electrónica en RD.</p>
+                    </a>
+
+                    <a href="/blog/como-certificarse-emisor-electronico-dgii.html" class="glass-card rounded-2xl p-6 block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20">Certificación</span>
+                        </div>
+                        <h4 class="font-display text-lg font-semibold mb-1">Cómo Certificarte como Emisor Electrónico ante la DGII — Guía Paso a Paso</h4>
+                        <p class="text-gray-400 text-sm">Guía paso a paso para certificarte como emisor electrónico ante la DGII.</p>
+                    </a>
+
+                    <a href="/blog/precios-facturacion-electronica-rd.html" class="glass-card rounded-2xl p-6 block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20">Precios</span>
+                        </div>
+                        <h4 class="font-display text-lg font-semibold mb-1">¿Cuánto Cuesta la Facturación Electrónica en República Dominicana?</h4>
+                        <p class="text-gray-400 text-sm">Compara precios de facturación electrónica en RD. DGMax desde $35/mes.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white/5 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <span class="font-display text-2xl font-bold">DGMax</span>
+                    </a>
+                    <p class="text-gray-400">Sistema de facturación electrónica para empresas dominicanas.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Producto</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/#features" class="text-gray-400 hover:text-amber-400 transition-colors">Características</a></li>
+                        <li><a href="/#pricing" class="text-gray-400 hover:text-amber-400 transition-colors">Precios</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Recursos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/blog/" class="text-gray-400 hover:text-amber-400 transition-colors">Blog</a></li>
+                        <li><a href="/blog/guia-facturacion-electronica-rd.html" class="text-gray-400 hover:text-amber-400 transition-colors">Guía Facturación Electrónica</a></li>
+                        <li><a href="/blog/como-certificarse-emisor-electronico-dgii.html" class="text-gray-400 hover:text-amber-400 transition-colors">Cómo Certificarte</a></li>
+                        <li><a href="/#faq" class="text-gray-400 hover:text-amber-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Contacto</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>
+                            <a href="mailto:info@dgmax.do" class="flex items-center gap-3 hover:text-amber-400 transition-colors">
+                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                info@dgmax.do
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Santo Domingo, RD
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2025 DGMax. Todos los derechos reservados.</p>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
+                    <a href="/terminos-de-servicio.html" class="text-gray-400 hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                    <a href="/politica-de-privacidad.html" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-midnight-900/90');
+            } else {
+                nav.classList.remove('bg-midnight-900/90');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1KKZGG1FZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G1KKZGG1FZ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog DGMax — Facturación Electrónica en República Dominicana</title>
+    <meta name="description" content="Artículos sobre facturación electrónica e-CF en República Dominicana. Guías, requisitos, certificación DGII y recursos para empresas dominicanas.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dgmax.do/blog/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgmax.do/blog/">
+    <meta property="og:title" content="Blog DGMax — Facturación Electrónica en República Dominicana">
+    <meta property="og:description" content="Artículos sobre facturación electrónica e-CF en República Dominicana. Guías, requisitos y certificación DGII.">
+    <meta property="og:locale" content="es_DO">
+    <meta property="og:site_name" content="DGMax">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        midnight: {
+                            900: '#0a0e1a',
+                            800: '#0f1629',
+                            700: '#151d35',
+                            600: '#1c2541',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Sora', sans-serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0e1a; }
+        ::-webkit-scrollbar-thumb { background: #1c2541; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(245, 158, 11, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #f59e0b, #14b8a6);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-midnight-900 text-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">DGMax</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="/#features" class="nav-link text-gray-300 hover:text-white transition-colors">Características</a>
+                    <a href="/#pricing" class="nav-link text-gray-300 hover:text-white transition-colors">Precios</a>
+                    <a href="/blog/" class="nav-link text-white transition-colors">Blog</a>
+                    <a href="/#faq" class="nav-link text-gray-300 hover:text-white transition-colors">FAQ</a>
+                    <a href="/#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://app.dgmax.do/?utm_source=landing&utm_medium=nav&utm_campaign=login" class="hidden sm:block text-gray-300 hover:text-white transition-colors">Iniciar Sesión</a>
+                    <a href="mailto:info@dgmax.do?subject=Quiero%20comenzar%20con%20DGMax" class="btn-primary bg-gradient-to-r from-amber-500 to-amber-600 text-midnight-900 px-6 py-2.5 rounded-xl font-semibold">
+                        Comenzar Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="pt-32 pb-16">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6">
+                Blog
+            </span>
+            <h1 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                Facturación Electrónica en<br>
+                <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">República Dominicana</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl">
+                Guías, requisitos y recursos para implementar facturación electrónica e-CF en tu empresa.
+            </p>
+        </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="pb-32">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-6">
+
+            <a href="/blog/guia-facturacion-electronica-rd.html" class="glass-card rounded-2xl p-8 block">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">Guía</span>
+                    <span class="text-sm text-gray-500">Febrero 2026</span>
+                </div>
+                <h2 class="font-display text-2xl font-semibold mb-3">Guía Completa: Facturación Electrónica en República Dominicana 2026</h2>
+                <p class="text-gray-400 leading-relaxed">Todo lo que tu empresa necesita saber sobre facturación electrónica en RD. Ley 32-23, plazos DGII, tipos de e-CF, y cómo certificarte.</p>
+            </a>
+
+            <a href="/blog/como-certificarse-emisor-electronico-dgii.html" class="glass-card rounded-2xl p-8 block">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20">Certificación</span>
+                    <span class="text-sm text-gray-500">Febrero 2026</span>
+                </div>
+                <h2 class="font-display text-2xl font-semibold mb-3">Cómo Certificarte como Emisor Electrónico ante la DGII — Guía Paso a Paso</h2>
+                <p class="text-gray-400 leading-relaxed">Guía paso a paso para certificarte como emisor electrónico ante la DGII. Formulario, set de pruebas, declaración jurada.</p>
+            </a>
+
+            <a href="/blog/requisitos-facturacion-electronica-2026.html" class="glass-card rounded-2xl p-8 block">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Requisitos</span>
+                    <span class="text-sm text-gray-500">Febrero 2026</span>
+                </div>
+                <h2 class="font-display text-2xl font-semibold mb-3">Requisitos para Facturar Electrónicamente en República Dominicana — 2026</h2>
+                <p class="text-gray-400 leading-relaxed">Conoce los requisitos para la facturación electrónica en RD: RNC activo, certificado digital, software certificado. Fecha límite PyMEs: mayo 2026.</p>
+            </a>
+
+            <a href="/blog/api-facturacion-electronica-desarrolladores.html" class="glass-card rounded-2xl p-8 block">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Desarrolladores</span>
+                    <span class="text-sm text-gray-500">Febrero 2026</span>
+                </div>
+                <h2 class="font-display text-2xl font-semibold mb-3">API de Facturación Electrónica para Desarrolladores — Integración e-CF DGII</h2>
+                <p class="text-gray-400 leading-relaxed">Integra facturación electrónica e-CF en tu sistema con la API de DGMax. Compatible con Python, PHP, .NET, Node.js.</p>
+            </a>
+
+            <a href="/blog/precios-facturacion-electronica-rd.html" class="glass-card rounded-2xl p-8 block">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20">Precios</span>
+                    <span class="text-sm text-gray-500">Febrero 2026</span>
+                </div>
+                <h2 class="font-display text-2xl font-semibold mb-3">¿Cuánto Cuesta la Facturación Electrónica en República Dominicana?</h2>
+                <p class="text-gray-400 leading-relaxed">Compara precios de facturación electrónica en RD. DGMax desde $35/mes con 800 documentos incluidos. Sin costos ocultos, sin bloqueos.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white/5 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <span class="font-display text-2xl font-bold">DGMax</span>
+                    </a>
+                    <p class="text-gray-400">Sistema de facturación electrónica para empresas dominicanas.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Producto</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/#features" class="text-gray-400 hover:text-amber-400 transition-colors">Características</a></li>
+                        <li><a href="/#pricing" class="text-gray-400 hover:text-amber-400 transition-colors">Precios</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Recursos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/blog/" class="text-gray-400 hover:text-amber-400 transition-colors">Blog</a></li>
+                        <li><a href="/blog/guia-facturacion-electronica-rd.html" class="text-gray-400 hover:text-amber-400 transition-colors">Guía Facturación Electrónica</a></li>
+                        <li><a href="/blog/como-certificarse-emisor-electronico-dgii.html" class="text-gray-400 hover:text-amber-400 transition-colors">Cómo Certificarte</a></li>
+                        <li><a href="/#faq" class="text-gray-400 hover:text-amber-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-semibold mb-6">Contacto</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>
+                            <a href="mailto:info@dgmax.do" class="flex items-center gap-3 hover:text-amber-400 transition-colors">
+                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                info@dgmax.do
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Santo Domingo, RD
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2025 DGMax. Todos los derechos reservados.</p>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
+                    <a href="/terminos-de-servicio.html" class="text-gray-400 hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                    <a href="/politica-de-privacidad.html" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-midnight-900/90');
+            } else {
+                nav.classList.remove('bg-midnight-900/90');
+            }
+        });
+    </script>
+</body>
+</html>
