@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Contingencia - DGMax</title>
+    <meta name="description" content="Política de contingencia y continuidad de negocio de DGMax - Sistema de facturación electrónica para República Dominicana.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        midnight: {
+                            900: '#0a0e1a',
+                            800: '#0f1629',
+                            700: '#151d35',
+                            600: '#1c2541',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Sora', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0e1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2541;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Prose styling for legal content */
+        .prose h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose ul li {
+            list-style-type: disc;
+        }
+
+        .prose ol li {
+            list-style-type: decimal;
+        }
+
+        .prose strong {
+            color: #fbbf24;
+        }
+
+        .prose table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+
+        .prose th, .prose td {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .prose th {
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+        }
+
+        .prose hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+
+        .prose a {
+            color: #14b8a6;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #2dd4bf;
+        }
+
+        .info-box {
+            background: rgba(20, 184, 166, 0.1);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .critical-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body class="bg-midnight-900 text-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass bg-midnight-900/90">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">DGMax</span>
+                </a>
+
+                <!-- Back to Home -->
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    <span>Volver al inicio</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Política de <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">Contingencia</span>
+                </h1>
+                <p class="text-gray-400">
+                    <strong>DGMax — AlMax Solutions EIRL</strong><br>
+                    Vigente desde: Octubre 2025 | Versión 1.0
+                </p>
+            </div>
+
+            <!-- Content -->
+            <div class="prose text-gray-300">
+
+                <h2 id="objetivo">1. Objetivo</h2>
+                <p>
+                    Establecer los procedimientos y medidas necesarias para garantizar la <strong>continuidad operativa</strong> de los servicios de DGMax ante incidentes, desastres o interrupciones, asegurando que los contribuyentes puedan continuar emitiendo comprobantes fiscales electrónicos (e-CF) en cumplimiento con los requisitos de la DGII.
+                </p>
+
+                <hr>
+
+                <h2 id="alcance">2. Alcance</h2>
+                <p>Esta política aplica a todos los servicios críticos de DGMax, su infraestructura tecnológica y las comunicaciones con clientes durante incidentes.</p>
+
+                <hr>
+
+                <h2 id="objetivos">3. Objetivos de Recuperación</h2>
+
+                <div class="info-box">
+                    <table class="mb-0">
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Objetivo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tiempo de restauración</strong></td>
+                                <td><strong>15 minutos</strong></td>
+                                <td>Tiempo máximo para restaurar el servicio DGMax</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pérdida máxima de datos</strong></td>
+                                <td><strong>5 minutos</strong></td>
+                                <td>Máximo período de datos que podría perderse ante un incidente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Disponibilidad</strong></td>
+                                <td><strong>99.5% mensual</strong></td>
+                                <td>Aproximadamente 3.6 horas de interrupción permitida por mes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>El objetivo de disponibilidad de <strong>99.5%</strong> está calculado de forma conservadora para absorber posibles interrupciones en servicios de proveedores de infraestructura, incluyendo eventuales mantenimientos de los sistemas de la DGII, que están fuera del control de DGMax.</p>
+
+                <hr>
+
+                <h2 id="dgii">4. Continuidad ante Indisponibilidad de la DGII</h2>
+
+                <div class="warning-box">
+                    <p class="mb-2"><strong>Garantía fundamental:</strong></p>
+                    <p class="mb-0">Cuando los servicios de la DGII no están disponibles, <strong>DGMax continúa operando</strong>. Los documentos se almacenan en cola de forma persistente y se procesan automáticamente cuando la DGII restablece el servicio. <strong>Ningún documento se pierde.</strong></p>
+                </div>
+
+                <p>DGMax detecta automáticamente la indisponibilidad de la DGII y encola los documentos de forma segura hasta que el servicio se restablezca. El procesamiento se reanuda automáticamente sin intervención del usuario.</p>
+
+                <hr>
+
+                <h2 id="clasificacion">5. Clasificación de Incidentes</h2>
+                <p>DGMax clasifica los incidentes por severidad y prioriza la respuesta según el impacto en las operaciones de facturación electrónica, atendiendo primero aquellos que afectan la emisión de e-CF.</p>
+
+                <hr>
+
+                <h2 id="procedimientos">6. Procedimientos de Respuesta</h2>
+                <p>DGMax sigue un proceso estructurado de respuesta a incidentes con un objetivo de restauración del servicio de <strong>15 minutos</strong>:</p>
+                <ul>
+                    <li>Monitoreo automatizado 24/7 con detección y contención rápida</li>
+                    <li>Investigación de causa raíz y restauración del servicio</li>
+                    <li>Análisis post-incidente e implementación de mejoras preventivas</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="backup">7. Estrategia de Respaldo</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Frecuencia</th>
+                            <th>Retención</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Respaldo completo</td>
+                            <td>Diario</td>
+                            <td>30 días</td>
+                        </tr>
+                        <tr>
+                            <td>Recuperación a punto en el tiempo</td>
+                            <td>Continuo</td>
+                            <td>7 días</td>
+                        </tr>
+                        <tr>
+                            <td>Respaldo semanal</td>
+                            <td>Semanal</td>
+                            <td>90 días</td>
+                        </tr>
+                        <tr>
+                            <td>Respaldo mensual</td>
+                            <td>Mensual</td>
+                            <td>1 año</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li>Certificados digitales: almacenamiento cifrado con versionado y verificación automática de integridad</li>
+                    <li>Configuraciones e infraestructura: versionadas y respaldadas de forma independiente</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="infraestructura">8. Infraestructura Redundante</h2>
+                <p>DGMax opera sobre infraestructura redundante en múltiples zonas de disponibilidad, con respaldos automáticos y pruebas periódicas de recuperación para garantizar la continuidad del servicio.</p>
+
+                <hr>
+
+                <h2 id="comunicacion">9. Comunicación Durante Incidentes</h2>
+                <p>DGMax notificará a los clientes afectados de manera oportuna por correo electrónico durante incidentes significativos. Los mantenimientos programados se comunican con al menos 48 horas de anticipación.</p>
+
+                <hr>
+
+                <h2 id="pruebas">10. Pruebas y Validación</h2>
+                <p>DGMax realiza pruebas periódicas de recuperación ante desastres, incluyendo restauración de respaldos, conmutación de base de datos y simulacros de recuperación completa, para validar la efectividad de esta política.</p>
+
+                <hr>
+
+                <h2 id="contacto">11. Contacto de Emergencia</h2>
+                <div class="warning-box">
+                    <ul class="mb-0">
+                        <li><strong>Correo:</strong> soporte@dgmax.do</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <h2 id="marco-legal">12. Marco Legal</h2>
+                <ul>
+                    <li><strong>Ley No. 11-92:</strong> Código Tributario (obligaciones de conservación de datos fiscales)</li>
+                    <li><strong>Normativas DGII:</strong> Sobre facturación electrónica</li>
+                    <li><strong>Ley No. 172-13:</strong> Protección de Datos Personales</li>
+                </ul>
+
+                <hr>
+
+                <p class="text-center text-gray-500">&copy; 2025 AlMax Solutions EIRL. Todos los derechos reservados.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-xl font-bold">DGMax</span>
+                </a>
+                <p class="text-gray-500 text-sm">&copy; 2025 DGMax. Todos los derechos reservados.</p>
+                <a href="index.html" class="text-gray-400 hover:text-amber-400 transition-colors">Volver al inicio</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

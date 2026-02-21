@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Servicio - DGMax</title>
+    <meta name="description" content="Términos y condiciones de uso de DGMax - Sistema de facturación electrónica para República Dominicana.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        midnight: {
+                            900: '#0a0e1a',
+                            800: '#0f1629',
+                            700: '#151d35',
+                            600: '#1c2541',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Sora', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0e1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2541;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Prose styling for legal content */
+        .prose h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #14b8a6;
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose ul li {
+            list-style-type: disc;
+        }
+
+        .prose ol li {
+            list-style-type: decimal;
+        }
+
+        .prose strong {
+            color: #fbbf24;
+        }
+
+        .prose table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+
+        .prose th, .prose td {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .prose th {
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+        }
+
+        .prose hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+
+        .prose a {
+            color: #14b8a6;
+            text-decoration: underline;
+        }
+
+        .prose a:hover {
+            color: #2dd4bf;
+        }
+
+        .info-box {
+            background: rgba(20, 184, 166, 0.1);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body class="bg-midnight-900 text-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass bg-midnight-900/90">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">DGMax</span>
+                </a>
+
+                <!-- Back to Home -->
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    <span>Volver al inicio</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Términos de <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">Servicio</span>
+                </h1>
+                <p class="text-gray-400">
+                    <strong>DGMax — AlMax Solutions EIRL</strong><br>
+                    Vigente desde: Octubre 2025 | Versión 1.1
+                </p>
+            </div>
+
+            <!-- Content -->
+            <div class="prose text-gray-300">
+
+                <div class="info-box">
+                    <p class="mb-0">
+                        <strong>IMPORTANTE:</strong> Al acceder o utilizar los servicios de DGMax, usted acepta estar legalmente obligado por estos Términos de Servicio. Si no está de acuerdo con estos términos, no utilice nuestros servicios.
+                    </p>
+                </div>
+
+                <h2 id="definiciones">1. Definiciones</h2>
+                <ul>
+                    <li><strong>"DGMax"</strong> o <strong>"Nosotros"</strong>: AlMax Solutions EIRL, RNC 133-60158-3, propietaria y operadora de la plataforma DGMax.</li>
+                    <li><strong>"Usuario"</strong> o <strong>"Usted"</strong>: Persona física o jurídica que utiliza los servicios de DGMax.</li>
+                    <li><strong>"Servicios"</strong>: Funcionalidades ofrecidas por DGMax para la generación, firma, envío y gestión de comprobantes fiscales electrónicos (e-CF).</li>
+                    <li><strong>"DGII"</strong>: Dirección General de Impuestos Internos de República Dominicana.</li>
+                    <li><strong>"Certificado Digital"</strong>: Certificado de firma electrónica emitido por una entidad certificadora autorizada.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="descripcion">2. Descripción de los Servicios</h2>
+                <p>DGMax es una plataforma de software como servicio (SaaS) que proporciona:</p>
+
+                <h3>2.1 Servicios Principales</h3>
+                <ul>
+                    <li><strong>Emisión de e-CF:</strong> Generación de comprobantes fiscales electrónicos (facturas, notas de crédito, notas de débito, etc.)</li>
+                    <li><strong>Firma Digital:</strong> Firma automática de documentos utilizando su certificado digital</li>
+                    <li><strong>Envío a DGII:</strong> Transmisión de comprobantes a los servicios web de la DGII</li>
+                    <li><strong>Recepción de e-CF:</strong> Procesamiento de comprobantes recibidos de proveedores</li>
+                    <li><strong>Acuses de Recepción:</strong> Generación de acuses de recepción según normativa DGII</li>
+                    <li><strong>Reportes Fiscales:</strong> Generación de formatos 606, 607 y otros requeridos por DGII</li>
+                </ul>
+
+                <h3>2.2 Servicios Complementarios</h3>
+                <ul>
+                    <li>Integración con sistemas externos mediante API</li>
+                    <li>Almacenamiento seguro de documentos</li>
+                    <li>Soporte técnico según el plan contratado</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="registro">3. Registro y Cuenta de Usuario</h2>
+
+                <h3>3.1 Requisitos de Registro</h3>
+                <p>Para utilizar los servicios de DGMax, usted debe:</p>
+                <ul>
+                    <li>Ser mayor de 18 años</li>
+                    <li>Tener capacidad legal para celebrar contratos</li>
+                    <li>Proporcionar información veraz y completa</li>
+                    <li>Contar con un RNC válido registrado ante la DGII</li>
+                    <li>Estar autorizado como emisor electrónico ante la DGII</li>
+                    <li>Poseer un certificado digital válido de una entidad certificadora autorizada</li>
+                </ul>
+
+                <h3>3.2 Responsabilidades del Usuario</h3>
+                <p>El Usuario es responsable de:</p>
+                <ul>
+                    <li>Mantener la confidencialidad de sus credenciales de acceso</li>
+                    <li>Proteger su certificado digital y contraseña asociada</li>
+                    <li>Toda actividad realizada bajo su cuenta</li>
+                    <li>Notificar inmediatamente cualquier uso no autorizado</li>
+                    <li>Mantener actualizada su información de contacto</li>
+                    <li>Cumplir con las normativas fiscales aplicables</li>
+                </ul>
+
+                <h3>3.3 Veracidad de la Información</h3>
+                <p>El Usuario garantiza que toda la información proporcionada es veraz, completa y actualizada. DGMax no es responsable por errores derivados de información incorrecta proporcionada por el Usuario.</p>
+
+                <hr>
+
+                <h2 id="uso-aceptable">4. Uso Aceptable</h2>
+
+                <h3>4.1 Usos Permitidos</h3>
+                <p>Los servicios de DGMax deben utilizarse exclusivamente para:</p>
+                <ul>
+                    <li>Emisión de comprobantes fiscales legítimos</li>
+                    <li>Gestión de obligaciones fiscales ante la DGII</li>
+                    <li>Integración con sistemas contables autorizados</li>
+                    <li>Operaciones comerciales legales en República Dominicana</li>
+                </ul>
+
+                <h3>4.2 Usos Prohibidos</h3>
+                <div class="warning-box">
+                    <p class="mb-2"><strong>Queda estrictamente prohibido:</strong></p>
+                    <ul class="mb-0">
+                        <li>Emitir comprobantes falsos o fraudulentos</li>
+                        <li>Utilizar los servicios para evasión fiscal</li>
+                        <li>Compartir credenciales o certificados con terceros no autorizados</li>
+                        <li>Intentar acceder a datos de otros usuarios</li>
+                        <li>Realizar ingeniería inversa del software</li>
+                        <li>Sobrecargar intencionalmente los sistemas</li>
+                        <li>Transmitir malware o código malicioso</li>
+                        <li>Violar leyes aplicables de República Dominicana</li>
+                    </ul>
+                </div>
+
+                <h3>4.3 Consecuencias del Uso Indebido</h3>
+                <p>El incumplimiento de estas políticas puede resultar en:</p>
+                <ul>
+                    <li>Suspensión temporal o permanente de la cuenta</li>
+                    <li>Terminación inmediata del servicio sin reembolso</li>
+                    <li>Reporte a las autoridades competentes</li>
+                    <li>Acciones legales por daños y perjuicios</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="pagos">5. Pagos y Facturación</h2>
+
+                <h3>5.1 Planes y Precios</h3>
+                <p>DGMax ofrece diferentes planes de servicio con características y precios publicados en nuestro sitio web. Los precios están expresados en dólares estadounidenses (USD) e incluyen el ITBIS aplicable.</p>
+
+                <h3>5.2 Ciclo de Facturación</h3>
+                <ul>
+                    <li><strong>Planes mensuales:</strong> Facturación al inicio de cada período mensual</li>
+                    <li><strong>Planes anuales:</strong> Facturación al inicio del año contratado</li>
+                    <li>El período de prueba gratuito es de 14 días</li>
+                </ul>
+
+                <h3>5.3 Métodos de Pago</h3>
+                <p>Los pagos se realizan mediante transferencia bancaria local. Los detalles de pago se proporcionan al momento de la facturación.</p>
+
+                <h3>5.4 Política de Reembolso</h3>
+                <ul>
+                    <li><strong>Período de prueba:</strong> Sin compromiso, puede cancelar en cualquier momento</li>
+                    <li><strong>Planes mensuales:</strong> No se ofrecen reembolsos por períodos parciales</li>
+                    <li><strong>Planes anuales:</strong> Reembolso proporcional dentro de los primeros 30 días</li>
+                </ul>
+
+                <h3>5.5 Cambios de Precio</h3>
+                <p>DGMax se reserva el derecho de modificar los precios con previo aviso de 30 días. Los cambios no afectarán períodos ya pagados.</p>
+
+                <hr>
+
+                <h2 id="disponibilidad">6. Disponibilidad del Servicio</h2>
+
+                <h3>6.1 Compromiso de Disponibilidad</h3>
+                <p>DGMax se compromete a mantener una disponibilidad del servicio de <strong>99.5%</strong> mensual (SLA), excluyendo:</p>
+                <ul>
+                    <li>Mantenimientos programados (notificados con 48 horas de anticipación)</li>
+                    <li>Interrupciones en servicios de terceros (DGII, proveedores de infraestructura)</li>
+                    <li>Eventos de fuerza mayor</li>
+                    <li>Ataques cibernéticos externos</li>
+                </ul>
+
+                <h3>6.2 Mantenimiento</h3>
+                <p>Los mantenimientos programados se realizarán preferiblemente en horarios de bajo uso y serán notificados con al menos 48 horas de anticipación.</p>
+
+                <h3>6.3 Soporte Técnico</h3>
+                <p>El soporte técnico se ofrece por correo electrónico y sistema de tickets, con tiempos de respuesta y horarios según el plan contratado. Para más detalles, consulte las condiciones de su plan.</p>
+
+                <hr>
+
+                <h2 id="propiedad-intelectual">7. Propiedad Intelectual</h2>
+
+                <h3>7.1 Derechos de DGMax</h3>
+                <p>DGMax y sus licenciantes son propietarios exclusivos de:</p>
+                <ul>
+                    <li>El software, código fuente y algoritmos de la plataforma</li>
+                    <li>La marca DGMax, logos y elementos gráficos</li>
+                    <li>La documentación técnica y materiales de capacitación</li>
+                    <li>Las mejoras y actualizaciones desarrolladas</li>
+                </ul>
+
+                <h3>7.2 Licencia de Uso</h3>
+                <p>DGMax otorga al Usuario una licencia limitada, no exclusiva, no transferible y revocable para utilizar los servicios durante el período de suscripción activa.</p>
+
+                <h3>7.3 Datos del Usuario</h3>
+                <p>El Usuario retiene todos los derechos sobre sus datos, incluyendo comprobantes fiscales, información de clientes y transacciones. DGMax solo procesará estos datos según lo necesario para prestar los servicios.</p>
+
+                <hr>
+
+                <h2 id="privacidad">8. Privacidad y Protección de Datos</h2>
+                <p>El tratamiento de datos personales se rige por nuestra <a href="politica-de-privacidad.html">Política de Privacidad</a>, que forma parte integral de estos Términos de Servicio.</p>
+                <p>Al utilizar DGMax, usted acepta:</p>
+                <ul>
+                    <li>El procesamiento de sus datos según la Política de Privacidad</li>
+                    <li>La transferencia de datos a servidores en Estados Unidos</li>
+                    <li>El almacenamiento de certificados digitales en forma cifrada</li>
+                    <li>La conservación de registros fiscales por el período legal requerido (10 años)</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="limitacion">9. Limitación de Responsabilidad</h2>
+
+                <h3>9.1 Exclusiones</h3>
+                <p>En la máxima medida permitida por la ley, DGMax no será responsable por:</p>
+                <ul>
+                    <li>Daños indirectos, incidentales o consecuentes</li>
+                    <li>Pérdida de beneficios, datos o oportunidades de negocio</li>
+                    <li>Errores en comprobantes causados por información incorrecta del Usuario</li>
+                    <li>Rechazos de la DGII por incumplimientos del Usuario</li>
+                    <li>Interrupciones causadas por terceros o fuerza mayor</li>
+                    <li>Uso indebido de credenciales o certificados</li>
+                </ul>
+
+                <h3>9.2 Límite de Responsabilidad</h3>
+                <p>La responsabilidad total de DGMax por cualquier reclamo relacionado con estos términos no excederá el monto pagado por el Usuario en los últimos 12 meses.</p>
+
+                <h3>9.3 Indemnización</h3>
+                <p>El Usuario acepta indemnizar y mantener indemne a DGMax, sus directores, empleados y agentes, de cualquier reclamo, daño o gasto (incluyendo honorarios legales) derivado de:</p>
+                <ul>
+                    <li>El uso de los servicios por parte del Usuario</li>
+                    <li>Violación de estos términos</li>
+                    <li>Infracción de derechos de terceros</li>
+                    <li>Incumplimiento de obligaciones fiscales</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="terminacion">10. Terminación</h2>
+
+                <h3>10.1 Por el Usuario</h3>
+                <p>El Usuario puede cancelar su suscripción en cualquier momento desde su panel de control. La cancelación será efectiva al final del período de facturación actual.</p>
+
+                <h3>10.2 Por DGMax</h3>
+                <p>DGMax puede suspender o terminar el servicio:</p>
+                <ul>
+                    <li>Por incumplimiento de estos términos</li>
+                    <li>Por falta de pago después de 15 días de vencimiento</li>
+                    <li>Por uso fraudulento o ilegal</li>
+                    <li>Por decisión judicial o requerimiento de autoridades</li>
+                    <li>Por discontinuación del servicio (con 90 días de aviso)</li>
+                </ul>
+
+                <h3>10.3 Efectos de la Terminación</h3>
+                <p>Al terminar el servicio:</p>
+                <ul>
+                    <li>Se revocará el acceso a la plataforma</li>
+                    <li>El Usuario podrá exportar sus datos por 30 días</li>
+                    <li>Los datos fiscales se conservarán según requisitos legales</li>
+                    <li>Otros datos serán eliminados según la Política de Privacidad</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="modificaciones">11. Modificaciones a los Términos</h2>
+                <p>DGMax se reserva el derecho de modificar estos Términos de Servicio:</p>
+                <ul>
+                    <li><strong>Cambios menores:</strong> Publicación en el sitio web</li>
+                    <li><strong>Cambios significativos:</strong> Notificación por email con 30 días de anticipación</li>
+                </ul>
+                <p>El uso continuado del servicio después de la fecha efectiva constituye aceptación de los nuevos términos.</p>
+
+                <hr>
+
+                <h2 id="ley-aplicable">12. Ley Aplicable y Resolución de Disputas</h2>
+                <p>Estos Términos de Servicio se rigen por las leyes de la <strong>República Dominicana</strong>, incluyendo la Ley 172-13 sobre Protección de Datos Personales, el Código Tributario (Ley 11-92), normativas de la DGII y la Ley 126-02 sobre Comercio Electrónico.</p>
+                <p>Ante cualquier disputa, las partes intentarán resolverla mediante negociación directa durante un período de 30 días. De no resolverse, la disputa será sometida a la jurisdicción de los tribunales competentes del Distrito Nacional, República Dominicana.</p>
+
+                <hr>
+
+                <h2 id="disposiciones-generales">13. Disposiciones Generales</h2>
+
+                <ul>
+                    <li>Estos Términos, junto con la <a href="politica-de-privacidad.html">Política de Privacidad</a>, constituyen el acuerdo completo entre las partes.</li>
+                    <li>Si alguna disposición se considera inválida, las demás permanecerán en pleno vigor.</li>
+                    <li>La falta de ejercicio de cualquier derecho no constituirá renuncia al mismo.</li>
+                    <li>El Usuario no podrá ceder estos términos sin consentimiento previo de DGMax.</li>
+                    <li>Ninguna parte será responsable por incumplimientos causados por eventos fuera de su control razonable.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="contacto">14. Contacto</h2>
+                <p>Para consultas sobre estos Términos de Servicio:</p>
+                <p>
+                    <strong>AlMax Solutions EIRL</strong><br>
+                    <strong>Email:</strong> soporte@dgmax.do<br>
+                    <strong>Privacidad:</strong> privacidad@dgmax.do<br>
+                    <strong>Sitio web:</strong> <a href="https://dgmax.do">https://dgmax.do</a>
+                </p>
+
+                <hr>
+
+                <p class="text-center text-gray-500">© 2025 AlMax Solutions EIRL. Todos los derechos reservados.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-xl font-bold">DGMax</span>
+                </a>
+                <p class="text-gray-500 text-sm">© 2025 DGMax. Todos los derechos reservados.</p>
+                <a href="index.html" class="text-gray-400 hover:text-amber-400 transition-colors">Volver al inicio</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
