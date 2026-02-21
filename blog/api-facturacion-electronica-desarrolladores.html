@@ -235,43 +235,91 @@
             </p>
 
             <div class="bg-midnight-800 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
-<pre>POST /api/v1/documents
+<pre>POST /api/v1/fiscal-invoices/
 Authorization: Bearer tu_api_key
 
 {
-  "document_type": "E31",
-  "buyer_rnc": "101234567",
-  "items": [
-    {
-      "description": "Servicio de consultoría",
-      "quantity": 1,
-      "unit_price": 50000.00,
-      "itbis_rate": 18
+  "company": {
+    "id": "tu_company_id"
+  },
+  "ecf": {
+    "encabezado": {
+      "id_doc": {
+        "tipo_ecf": 31,
+        "e_ncf": "E310000000337",
+        "fecha_vencimiento_secuencia": "31-12-2028",
+        "indicador_monto_gravado": 0,
+        "tipo_ingresos": "01",
+        "tipo_pago": 1
+      },
+      "emisor": {
+        "rnc_emisor": "132786262",
+        "razon_social_emisor": "Almax Dominicana SRL",
+        "direccion_emisor": "Av. Winston Churchill 1099, Santo Domingo",
+        "fecha_emision": "21-02-2026"
+      },
+      "comprador": {
+        "rnc_comprador": "130952027",
+        "razon_social_comprador": "Distribuidora Caribe SRL",
+        "correo_comprador": "fiscal@distribuidoracaribe.com.do"
+      },
+      "totales": {
+        "monto_gravado_total": "2000.00",
+        "monto_gravado_i1": "2000.00",
+        "itbis1": "18",
+        "total_itbis": "360.00",
+        "total_itbis1": "360.00",
+        "monto_total": "2360.00"
+      }
+    },
+    "detalles_items": {
+      "item": [
+        {
+          "numero_linea": "1",
+          "indicador_facturacion": 1,
+          "nombre_item": "Servicio de consultoría técnica",
+          "indicador_bien_o_servicio": 1,
+          "cantidad_item": "1",
+          "unidad_medida": 43,
+          "precio_unitario_item": "1000.00",
+          "monto_item": "1000.00"
+        },
+        {
+          "numero_linea": "2",
+          "indicador_facturacion": 1,
+          "nombre_item": "Licencia software anual",
+          "indicador_bien_o_servicio": 1,
+          "cantidad_item": "10",
+          "unidad_medida": 32,
+          "precio_unitario_item": "100.00",
+          "monto_item": "1000.00"
+        }
+      ]
     }
-  ],
-  "payment": {
-    "method": "credit",
-    "term_days": 30
   }
 }</pre>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-4">
-                La respuesta incluye toda la información que tu sistema necesita para actualizar sus registros:
+                La respuesta incluye toda la información que tu sistema necesita para actualizar sus registros: el estado del documento, el código de seguridad, la URL del timbre fiscal, y los enlaces al XML firmado y al PDF generado:
             </p>
 
             <div class="bg-midnight-800 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto mb-4">
 <pre>{
-  "encf": "E310000000001",
-  "status": "accepted",
-  "dgii_received_at": "2026-02-21T14:30:00",
-  "signed_xml_url": "https://storage.dgmax.do/docs/...",
-  "tracking_number": "DGM-2026-00042"
+  "id": "069965d2-342d-7385-8000-6564e46e003a",
+  "status": "REGISTERED",
+  "rnc": "132786262",
+  "encf": "E310000000337",
+  "document_stamp_url": "https://ecf.dgii.gov.do/ecf/ConsultaTimbre?...",
+  "security_code": "KsFzfA",
+  "signature_date": "21-02-2026 14:30:23",
+  "signed_xml": "https://storage.dgmax.do/docs/E310000000337.xml",
+  "pdf": "https://storage.dgmax.do/docs/E310000000337.pdf"
 }</pre>
             </div>
 
             <p class="text-gray-300 leading-relaxed mb-4">
-                Detrás de esa solicitud, DGMax ejecuta varios pasos de forma transparente: valida los datos contra las reglas de negocio de la DGII, genera el XML según el esquema XSD correspondiente al tipo de documento, aplica la firma digital con el certificado P12 de tu empresa, envía el documento al servicio de recepción de la DGII, y espera la confirmación. Todo esto ocurre en segundos y sin intervención adicional de tu sistema.
+                Detrás de esa solicitud, DGMax ejecuta varios pasos de forma transparente: valida los datos contra las reglas de negocio de la DGII, genera el XML según el esquema XSD correspondiente al tipo de documento, aplica la firma digital con el certificado P12 de tu empresa, envía el documento al servicio de recepción de la DGII, y espera la confirmación. El campo <code class="bg-midnight-800 px-2 py-0.5 rounded text-amber-400">document_stamp_url</code> apunta directamente al timbre fiscal verificable en el portal de la DGII. Todo esto ocurre en segundos y sin intervención adicional de tu sistema.
             </p>
 
             <!-- Section 4 -->
