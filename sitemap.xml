@@ -2,55 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dgmax.do/</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/terminos-de-servicio.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/terminos-de-servicio</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/politica-de-privacidad.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/politica-de-privacidad</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dgmax.do/politica-de-seguridad</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dgmax.do/politica-de-contingencia</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dgmax.do/blog/</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/blog/guia-facturacion-electronica-rd.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/blog/guia-facturacion-electronica-rd</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/blog/como-certificarse-emisor-electronico-dgii.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/blog/como-certificarse-emisor-electronico-dgii</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/blog/requisitos-facturacion-electronica-2026.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/blog/requisitos-facturacion-electronica-2026</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/blog/api-facturacion-electronica-desarrolladores.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/blog/api-facturacion-electronica-desarrolladores</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dgmax.do/blog/precios-facturacion-electronica-rd.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://dgmax.do/blog/precios-facturacion-electronica-rd</loc>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
