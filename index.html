@@ -1423,6 +1423,23 @@
         var s=d.createElement("script");
         s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);
     }
+
+    // Track Tally form submission as GA4 conversion event
+    window.addEventListener("message", function(e) {
+        if (e.data && e.data.event === "Tally.FormSubmitted") {
+            if (typeof gtag === "function") {
+                gtag("event", "generate_lead", {
+                    event_category: "form",
+                    event_label: "tally_contact_form",
+                    value: 1
+                });
+                gtag("event", "SUBMIT_LEAD_FORM", {
+                    event_category: "form",
+                    event_label: "tally_contact_form"
+                });
+            }
+        }
+    });
     </script>
 </body>
 </html>
