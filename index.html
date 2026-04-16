@@ -1426,18 +1426,21 @@
 
     // Track Tally form submission as GA4 conversion event
     window.addEventListener("message", function(e) {
-        if (typeof e.data === "string" && e.data.includes("Tally.FormSubmitted")) {
-            if (typeof gtag === "function") {
-                gtag("event", "generate_lead", {
-                    event_category: "form",
-                    event_label: "tally_contact_form",
-                    value: 1
-                });
-                gtag("event", "SUBMIT_LEAD_FORM", {
-                    event_category: "form",
-                    event_label: "tally_contact_form"
-                });
-            }
+        if (e.origin !== "https://tally.so") return;
+        if (typeof e.data !== "string") return;
+        var msg;
+        try { msg = JSON.parse(e.data); } catch(err) { return; }
+        if (msg.event !== "Tally.FormSubmitted") return;
+        if (typeof gtag === "function") {
+            gtag("event", "generate_lead", {
+                event_category: "form",
+                event_label: "tally_contact_form",
+                value: 1
+            });
+            gtag("event", "SUBMIT_LEAD_FORM", {
+                event_category: "form",
+                event_label: "tally_contact_form"
+            });
         }
     });
     </script>
