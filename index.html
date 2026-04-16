@@ -1426,7 +1426,7 @@
 
     // Track Tally form submission as GA4 conversion event
     window.addEventListener("message", function(e) {
-        if (e.data && e.data.event === "Tally.FormSubmitted") {
+        if (typeof e.data === "string" && e.data.includes("Tally.FormSubmitted")) {
             if (typeof gtag === "function") {
                 gtag("event", "generate_lead", {
                     event_category: "form",
