@@ -105,7 +105,7 @@
                     Pago <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">seguro</span> con DGMax
                 </h1>
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Procesamos los pagos de tu suscripción a través de una pasarela certificada PCI DSS con autenticación 3D Secure en cada transacción.
+                    El primer cobro se emite únicamente después de que el cliente active el servicio en producción, con la primera factura electrónica (e-CF) aceptada por la DGII. A partir de ese momento, la suscripción se factura en pesos dominicanos (RD$/DOP) a través de una pasarela certificada PCI DSS con autenticación 3D Secure.
                 </p>
             </div>
 
@@ -125,21 +125,26 @@
             </div>
 
             <!-- Flow -->
-            <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
                 <div class="glass-card rounded-2xl p-6">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold mb-2">Eliges tu plan</h3>
-                    <p class="text-gray-400 text-sm">Seleccionas el plan DGMax que mejor se ajusta a tu volumen de e-CF (Starter, PyME, Business o Enterprise) desde el panel de control.</p>
+                    <h3 class="font-display font-semibold mb-2">Onboarding sin costo</h3>
+                    <p class="text-gray-400 text-sm">El cliente completa la integración técnica y la certificación con la DGII acompañado por nuestro equipo. Durante esta fase no se realiza ningún cobro.</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold mb-2">Ingresas los datos de pago</h3>
-                    <p class="text-gray-400 text-sm">Los datos de tu tarjeta se transmiten cifrados directamente a la pasarela certificada PCI DSS. DGMax no almacena el número de tarjeta ni el CVV.</p>
+                    <h3 class="font-display font-semibold mb-2">Activación en producción</h3>
+                    <p class="text-gray-400 text-sm">El cliente envía su primer e-CF en ambiente de producción y obtiene aceptación ("Aceptado") por parte de la DGII. Este evento confirma la entrega del servicio.</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold mb-2">Autenticación 3D Secure</h3>
-                    <p class="text-gray-400 text-sm">Tu banco emisor te solicita un segundo factor (OTP o biometría). Al confirmar, el servicio se activa y recibes tu recibo y e-CF por correo.</p>
+                    <h3 class="font-display font-semibold mb-2">Facturación de la suscripción</h3>
+                    <p class="text-gray-400 text-sm">Según el plan contratado: en <strong>suscripciones mensuales</strong>, se realiza un cargo recurrente a la tarjeta registrada; en <strong>planes anuales o con contrato</strong>, DGMax emite una factura que activa la suscripción al recibir el pago.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">4</div>
+                    <h3 class="font-display font-semibold mb-2">Cobro autenticado 3DS</h3>
+                    <p class="text-gray-400 text-sm">Cada cargo con tarjeta se procesa en RD$ a través de una pasarela certificada PCI DSS y se autentica con 3D Secure. DGMax no almacena el PAN ni el CVV. El cliente recibe el recibo electrónico por correo.</p>
                 </div>
             </div>
 
@@ -170,7 +175,7 @@
                     Contactar ventas para activar tu plan
                 </a>
                 <p class="text-gray-500 text-sm mt-4">
-                    Los montos se cobran en pesos dominicanos (RD$) al tipo de cambio del día.
+                    Todos los cargos con tarjeta se procesan en pesos dominicanos (RD$/DOP). DGMax no inicia cobros antes de la activación del servicio en producción.
                 </p>
             </div>
 
