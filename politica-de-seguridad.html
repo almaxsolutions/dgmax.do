@@ -285,9 +285,50 @@
                 <h3>4.5 Seguridad en el Desarrollo</h3>
                 <p>El desarrollo de DGMax sigue prácticas de seguridad en el ciclo de vida del software, incluyendo revisión de código, análisis de vulnerabilidades y actualización periódica de componentes.</p>
 
+                <h3>4.6 Transmisión segura de datos de tarjeta</h3>
+                <p>Los pagos de suscripciones se procesan a través de una pasarela de pagos certificada bajo el estándar <strong>PCI DSS</strong>. DGMax no almacena ni tiene acceso al número completo de tarjeta, CVV ni fecha de expiración del tarjetahabiente: estos datos se transmiten cifrados directamente desde el navegador del cliente a la pasarela.</p>
+                <ul>
+                    <li>Todas las transacciones se autentican mediante <strong>3D Secure</strong> (Verified by Visa / MasterCard ID Check).</li>
+                    <li>La comunicación con la pasarela de pagos utiliza TLS 1.2 o superior.</li>
+                    <li>DGMax únicamente retiene un identificador tokenizado para gestionar cobros recurrentes; no se almacena el PAN.</li>
+                    <li>En caso de disputa o fraude, se sigue el procedimiento del adquirente y la entidad bancaria emisora.</li>
+                </ul>
+                <div class="border border-white/10 rounded-xl p-5 my-6">
+                    <p class="text-xs uppercase tracking-wider text-gray-500 mb-4 font-display font-semibold">Redes y autenticación soportadas</p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <img src="/assets/badges/visa.jpg" alt="Visa" class="h-9 bg-white rounded-md px-2 py-1">
+                        <img src="/assets/badges/mastercard.jpg" alt="MasterCard" class="h-9 bg-white rounded-md px-2 py-1">
+                        <img src="/assets/badges/visa-secure.png" alt="Verified by Visa" class="h-10 bg-white rounded-md px-2 py-1">
+                        <img src="/assets/badges/mastercard-id-check.png" alt="MasterCard ID Check" class="h-10 bg-white rounded-md px-2 py-1">
+                    </div>
+                </div>
+
                 <hr>
 
-                <h2 id="incidentes">5. Gestión de Incidentes de Seguridad</h2>
+                <h2 id="derechos-tarjetahabiente">5. Derechos del Tarjetahabiente</h2>
+                <p>Como cliente que realiza pagos con tarjeta por los servicios de DGMax, usted tiene derecho a:</p>
+                <ul>
+                    <li>Recibir información clara y transparente del cargo antes de autorizarlo (concepto, monto, moneda y frecuencia).</li>
+                    <li>Solicitar la cancelación de cobros recurrentes en cualquier momento escribiendo a <a href="mailto:soporte@dgmax.do">soporte@dgmax.do</a>.</li>
+                    <li>Disputar cargos no reconocidos ante DGMax o su banco emisor siguiendo el procedimiento descrito en la <a href="/politica-de-reembolsos">Política de Reembolsos y Cancelaciones</a>.</li>
+                    <li>Solicitar un recibo detallado de cada transacción y el comprobante fiscal electrónico (e-CF) asociado.</li>
+                    <li>Confidencialidad en el tratamiento de sus datos personales conforme a la Ley 172-13.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="recomendaciones">6. Recomendaciones de Seguridad</h2>
+                <p>Para proteger sus datos durante el proceso de pago:</p>
+                <ul>
+                    <li>Nunca comparta el número completo de su tarjeta, CVV ni contraseñas por correo, teléfono o chat. DGMax nunca solicita esa información.</li>
+                    <li>Antes de ingresar datos de pago, verifique que la dirección del sitio comience con <strong>https://</strong> y muestre el candado de seguridad.</li>
+                    <li>Revise periódicamente los estados de cuenta de su tarjeta y reporte de inmediato cualquier cargo no reconocido.</li>
+                    <li>Si sospecha de un uso indebido, contáctenos a <a href="mailto:soporte@dgmax.do">soporte@dgmax.do</a> y notifique a su banco emisor.</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="incidentes">7. Gestión de Incidentes de Seguridad</h2>
                 <p>DGMax cuenta con un procedimiento documentado para la gestión de incidentes de seguridad que incluye:</p>
                 <ul>
                     <li>Detección automatizada y contención rápida de incidentes</li>
@@ -299,17 +340,17 @@
 
                 <hr>
 
-                <h2 id="responsabilidades">6. Responsabilidades</h2>
+                <h2 id="responsabilidades">8. Responsabilidades</h2>
                 <p>DGMax cuenta con roles y responsabilidades claramente definidos para la gestión de la seguridad de la información, desde la dirección de la empresa hasta el equipo técnico y proveedores externos, asegurando que todos los involucrados cumplan con los controles establecidos en esta política.</p>
 
                 <hr>
 
-                <h2 id="cumplimiento">7. Cumplimiento y Revisión</h2>
+                <h2 id="cumplimiento">9. Cumplimiento y Revisión</h2>
                 <p>DGMax realiza auditorías internas de seguridad de forma periódica y revisa esta política al menos una vez al año o ante cambios significativos. El incumplimiento de esta política puede resultar en suspensión de acceso, terminación contractual o acciones legales según la gravedad de la infracción.</p>
 
                 <hr>
 
-                <h2 id="marco-legal">8. Marco Legal</h2>
+                <h2 id="marco-legal">10. Marco Legal</h2>
                 <ul>
                     <li><strong>Ley No. 172-13:</strong> Protección de Datos de Carácter Personal</li>
                     <li><strong>Ley No. 11-92:</strong> Código Tributario de la República Dominicana</li>
@@ -319,12 +360,17 @@
 
                 <hr>
 
-                <h2 id="contacto">9. Contacto</h2>
-                <p>Para reportar incidentes de seguridad o consultas relacionadas con esta política: <strong>soporte@dgmax.do</strong></p>
+                <h2 id="contacto">11. Contacto</h2>
+                <p>Para reportar incidentes de seguridad o consultas relacionadas con esta política:</p>
+                <ul>
+                    <li><strong>Correo:</strong> <a href="mailto:soporte@dgmax.do">soporte@dgmax.do</a></li>
+                    <li><strong>Teléfono:</strong> +1 (829) 616-1616</li>
+                    <li><strong>Dirección:</strong> Punta Cana, República Dominicana</li>
+                </ul>
 
                 <hr>
 
-                <p class="text-center text-gray-500">&copy; 2025 AlMax Solutions EIRL. Todos los derechos reservados.</p>
+                <p class="text-center text-gray-500">&copy; 2026 AlMax Solutions EIRL. Todos los derechos reservados.</p>
 
             </div>
         </div>
@@ -332,8 +378,8 @@
 
     <!-- Footer -->
     <footer class="border-t border-white/5 bg-midnight-900">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 space-y-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
                 <a href="/" class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
                         <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -342,8 +388,24 @@
                     </div>
                     <span class="font-display text-xl font-bold">DGMax</span>
                 </a>
-                <p class="text-gray-500 text-sm">&copy; 2025 DGMax. Todos los derechos reservados.</p>
-                <a href="/" class="text-gray-400 hover:text-amber-400 transition-colors">Volver al inicio</a>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <a href="/terminos-de-servicio" class="text-gray-400 hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                    <a href="/politica-de-privacidad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Privacidad</a>
+                    <a href="/politica-de-seguridad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Seguridad</a>
+                    <a href="/politica-de-reembolsos" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Reembolsos</a>
+                        <a href="/politica-de-reembolsos#entrega" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Entrega</a>
+                    <a href="/politica-de-contingencia" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Contingencia</a>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <img src="/assets/badges/visa.jpg" alt="Visa" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard.jpg" alt="MasterCard" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/visa-secure.png" alt="Verified by Visa" class="h-8 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard-id-check.png" alt="MasterCard ID Check" class="h-8 bg-white rounded px-1.5 py-0.5">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2 pt-5 border-t border-white/5 text-xs text-gray-500">
+                <p>&copy; 2026 Almax Solutions EIRL. Todos los derechos reservados.</p>
+                <p>Pagos seguros · Autenticación 3D Secure en cada transacción</p>
             </div>
         </div>
     </footer>

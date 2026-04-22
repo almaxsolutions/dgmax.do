@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1KKZGG1FZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G1KKZGG1FZ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Seguro - DGMax</title>
+    <meta name="description" content="Proceso de pago seguro de DGMax. Pagos con Visa y MasterCard autenticados mediante 3D Secure (Verified by Visa / MasterCard ID Check).">
+    <link rel="canonical" href="https://dgmax.do/checkout">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgmax.do/checkout">
+    <meta property="og:title" content="Pago Seguro - DGMax">
+    <meta property="og:description" content="Pagos con Visa y MasterCard autenticados mediante 3D Secure.">
+    <meta property="og:image" content="https://dgmax.do/assets/og-image.png">
+    <meta property="og:site_name" content="DGMax">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        midnight: { 900: '#0a0e1a', 800: '#0f1629', 700: '#151d35', 600: '#1c2541' },
+                        amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+                        teal: { 400: '#2dd4bf', 500: '#14b8a6' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Sora', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+    </style>
+</head>
+
+<body class="bg-midnight-900 text-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass bg-midnight-900/90">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">DGMax</span>
+                </a>
+                <a href="/" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    <span>Volver al inicio</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20 mb-6">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    Transacción protegida
+                </span>
+                <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Pago <span class="bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent">seguro</span> con DGMax
+                </h1>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Procesamos los pagos de tu suscripción a través de una pasarela certificada PCI DSS con autenticación 3D Secure en cada transacción.
+                </p>
+            </div>
+
+            <!-- Badges hero -->
+            <div class="glass-card rounded-3xl p-10 mb-10">
+                <h2 class="font-display text-xl font-semibold text-center mb-8 text-gray-300">Aceptamos</h2>
+                <div class="flex flex-wrap items-center justify-center gap-8">
+                    <img src="/assets/badges/visa.jpg" alt="Visa" class="h-12 bg-white rounded-lg px-3 py-2">
+                    <img src="/assets/badges/mastercard.jpg" alt="MasterCard" class="h-12 bg-white rounded-lg px-3 py-2">
+                    <div class="w-px h-14 bg-white/20 mx-2"></div>
+                    <img src="/assets/badges/visa-secure.png" alt="Verified by Visa" class="h-14 bg-white rounded-lg px-3 py-2">
+                    <img src="/assets/badges/mastercard-id-check.png" alt="MasterCard ID Check" class="h-14 bg-white rounded-lg px-3 py-2">
+                </div>
+                <p class="text-center text-gray-500 text-sm mt-8">
+                    Cada cargo se autentica con 3D Secure. Tu banco emisor confirma la transacción mediante un segundo factor antes de aprobar el pago.
+                </p>
+            </div>
+
+            <!-- Flow -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">1</div>
+                    <h3 class="font-display font-semibold mb-2">Eliges tu plan</h3>
+                    <p class="text-gray-400 text-sm">Seleccionas el plan DGMax que mejor se ajusta a tu volumen de e-CF (Starter, PyME, Business o Enterprise) desde el panel de control.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">2</div>
+                    <h3 class="font-display font-semibold mb-2">Ingresas los datos de pago</h3>
+                    <p class="text-gray-400 text-sm">Los datos de tu tarjeta se transmiten cifrados directamente a la pasarela certificada PCI DSS. DGMax no almacena el número de tarjeta ni el CVV.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-display font-bold mb-4">3</div>
+                    <h3 class="font-display font-semibold mb-2">Autenticación 3D Secure</h3>
+                    <p class="text-gray-400 text-sm">Tu banco emisor te solicita un segundo factor (OTP o biometría). Al confirmar, el servicio se activa y recibes tu recibo y e-CF por correo.</p>
+                </div>
+            </div>
+
+            <!-- Contact + Policies -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-display font-semibold mb-4">Servicio al cliente</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><strong class="text-amber-400">Correo:</strong> <a href="mailto:soporte@dgmax.do" class="hover:text-amber-400">soporte@dgmax.do</a></li>
+                        <li><strong class="text-amber-400">Teléfono:</strong> +1 (829) 616-1616</li>
+                        <li><strong class="text-amber-400">Dirección:</strong> Punta Cana, República Dominicana</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="font-display font-semibold mb-4">Antes de pagar</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/politica-de-reembolsos" class="hover:text-amber-400 underline">Política de reembolsos y cancelaciones</a></li>
+                        <li><a href="/politica-de-seguridad" class="hover:text-amber-400 underline">Política de seguridad</a></li>
+                        <li><a href="/politica-de-privacidad" class="hover:text-amber-400 underline">Política de privacidad</a></li>
+                        <li><a href="/terminos-de-servicio" class="hover:text-amber-400 underline">Términos de servicio</a></li>
+                        <li><a href="/assets/recibo-muestra.html" class="hover:text-amber-400 underline">Ver ejemplo de recibo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="/#contacto" class="inline-block btn-primary bg-gradient-to-r from-amber-500 to-amber-600 text-midnight-900 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-amber-500/30 transition-shadow">
+                    Contactar ventas para activar tu plan
+                </a>
+                <p class="text-gray-500 text-sm mt-4">
+                    Los montos se cobran en pesos dominicanos (RD$) al tipo de cambio del día.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-midnight-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 space-y-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+                <a href="/" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-xl font-bold">DGMax</span>
+                </a>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <a href="/terminos-de-servicio" class="text-gray-400 hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                    <a href="/politica-de-privacidad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Privacidad</a>
+                    <a href="/politica-de-seguridad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Seguridad</a>
+                    <a href="/politica-de-reembolsos" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Reembolsos</a>
+                        <a href="/politica-de-reembolsos#entrega" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Entrega</a>
+                    <a href="/politica-de-contingencia" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Contingencia</a>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <img src="/assets/badges/visa.jpg" alt="Visa" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard.jpg" alt="MasterCard" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/visa-secure.png" alt="Verified by Visa" class="h-8 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard-id-check.png" alt="MasterCard ID Check" class="h-8 bg-white rounded px-1.5 py-0.5">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2 pt-5 border-t border-white/5 text-xs text-gray-500">
+                <p>&copy; 2026 Almax Solutions EIRL. Todos los derechos reservados.</p>
+                <p>Pagos seguros · Autenticación 3D Secure en cada transacción</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

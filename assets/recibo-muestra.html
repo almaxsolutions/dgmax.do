@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Pago - DGMax (Muestra)</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #1f2937;
+            background: #f3f4f6;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+        .sheet {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 56px 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+        h1, h2, h3, .display { font-family: 'Sora', sans-serif; font-weight: 600; }
+        .teal { color: #14b8a6; }
+        .muted { color: #6b7280; }
+        .small { font-size: 12px; }
+        .brand {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 32px;
+            border-bottom: 2px solid #14b8a6;
+            margin-bottom: 32px;
+        }
+        .brand-left .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a0e1a;
+            margin-bottom: 6px;
+        }
+        .brand-left .tag {
+            font-size: 13px;
+            color: #6b7280;
+        }
+        .brand-right {
+            text-align: right;
+            font-size: 13px;
+            color: #4b5563;
+        }
+        .brand-right strong { color: #0a0e1a; }
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 28px;
+        }
+        .title-row h1 {
+            font-size: 30px;
+            color: #14b8a6;
+        }
+        .title-row .number {
+            font-size: 16px;
+            color: #6b7280;
+            font-family: 'Sora', sans-serif;
+        }
+        .meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+        .meta .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .meta .value {
+            font-size: 14px;
+            color: #0a0e1a;
+            font-weight: 500;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 28px;
+        }
+        thead th {
+            background: #f9fafb;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #374151;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        thead th.num { text-align: right; }
+        tbody td {
+            padding: 16px;
+            border-bottom: 1px solid #f3f4f6;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        tbody td.num { text-align: right; font-variant-numeric: tabular-nums; }
+        .item-title { font-weight: 600; margin-bottom: 4px; color: #0a0e1a; }
+        .item-desc { font-size: 12px; color: #6b7280; }
+        .totals {
+            margin-left: auto;
+            width: 320px;
+            margin-bottom: 32px;
+        }
+        .totals .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 14px;
+            font-variant-numeric: tabular-nums;
+        }
+        .totals .row.total {
+            border-top: 2px solid #0a0e1a;
+            margin-top: 6px;
+            padding-top: 14px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #0a0e1a;
+        }
+        .payment {
+            background: #f9fafb;
+            border-left: 3px solid #14b8a6;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+            border-radius: 2px;
+        }
+        .payment .title {
+            font-family: 'Sora', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #14b8a6;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .payment .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 24px;
+            font-size: 13px;
+        }
+        .payment .grid div strong { color: #0a0e1a; font-weight: 600; }
+        .three-ds {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 22px;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            margin-bottom: 28px;
+        }
+        .three-ds p {
+            font-size: 12px;
+            color: #4b5563;
+            flex: 1;
+        }
+        .three-ds .badges {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .three-ds img.visa,
+        .three-ds img.mc { height: 26px; }
+        .three-ds img.secure { height: 30px; }
+        .note {
+            font-size: 12px;
+            color: #6b7280;
+            line-height: 1.6;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        .watermark {
+            position: fixed;
+            top: 10px;
+            right: 14px;
+            background: #fde68a;
+            color: #78350f;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        @media print {
+            body { background: #ffffff; padding: 0; }
+            .sheet { box-shadow: none; padding: 40px 48px; }
+            .watermark { position: absolute; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="watermark">Muestra / Sample</div>
+
+<div class="sheet">
+
+    <div class="brand">
+        <div class="brand-left">
+            <div class="logo">DGMax</div>
+            <div class="tag">Facturación electrónica e-CF · República Dominicana</div>
+        </div>
+        <div class="brand-right">
+            <strong>Almax Solutions EIRL</strong><br>
+            Punta Cana, República Dominicana<br>
+            RNC 133-60158-3<br>
+            soporte@dgmax.do · +1 (829) 616-1616
+        </div>
+    </div>
+
+    <div class="title-row">
+        <h1>Recibo de Pago</h1>
+        <div class="number">No. REC-2026-0001</div>
+    </div>
+
+    <div class="meta">
+        <div>
+            <div class="label">Fecha del pago</div>
+            <div class="value">17 de abril de 2026</div>
+        </div>
+        <div>
+            <div class="label">Cliente</div>
+            <div class="value">Razón Social S.R.L.<br><span class="small muted">RNC 130-00000-0</span></div>
+        </div>
+        <div>
+            <div class="label">Período facturado</div>
+            <div class="value">Abril 2026 (mensual)</div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th class="num">Cant.</th>
+                <th class="num">Precio</th>
+                <th class="num">Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="item-title">Plan PyME DGMax &middot; Suscripción mensual</div>
+                    <div class="item-desc">
+                        Hasta 2,000 e-CF/mes. Generación de XML conforme a DGII, firma digital con certificado del emisor, envío, reintentos automáticos y consulta de estatus. Panel web, API REST y soporte prioritario.
+                    </div>
+                </td>
+                <td class="num">1</td>
+                <td class="num">RD$ 3,395.00</td>
+                <td class="num">RD$ 3,395.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <div class="row"><span>Subtotal</span><span>RD$ 3,395.00</span></div>
+        <div class="row"><span>ITBIS (18%)</span><span>RD$ 611.10</span></div>
+        <div class="row total"><span>Total cobrado</span><span>RD$ 4,006.10</span></div>
+    </div>
+
+    <div class="payment">
+        <div class="title">Detalle del cobro</div>
+        <div class="grid">
+            <div><strong>Método:</strong> Tarjeta de crédito</div>
+            <div><strong>Marca:</strong> Visa terminada en ****1234</div>
+            <div><strong>Código de autorización:</strong> 123456</div>
+            <div><strong>ID de transacción:</strong> AZL-2026041700123</div>
+            <div><strong>Procesador:</strong> Pasarela certificada PCI DSS</div>
+            <div><strong>Moneda:</strong> Pesos dominicanos (RD$)</div>
+        </div>
+    </div>
+
+    <div class="three-ds">
+        <p>Transacción autenticada mediante <strong>3D Secure</strong> (Verified by Visa / MasterCard ID Check). Los datos de la tarjeta no son almacenados por DGMax.</p>
+        <div class="badges">
+            <img class="visa" src="badges/visa.jpg" alt="Visa">
+            <img class="mc" src="badges/mastercard.jpg" alt="MasterCard">
+            <img class="secure" src="badges/visa-secure.png" alt="Verified by Visa">
+            <img class="secure" src="badges/mastercard-id-check.png" alt="MasterCard ID Check">
+        </div>
+    </div>
+
+    <div class="note">
+        Este recibo confirma el cobro de su suscripción al servicio DGMax. El comprobante fiscal electrónico (e-CF) correspondiente a esta transacción se envía por separado al correo registrado, firmado digitalmente y aceptado por la DGII.
+        <br><br>
+        Para consultas relacionadas con este cobro, reembolsos o cancelaciones, escríbanos a <strong>soporte@dgmax.do</strong> o llame al <strong>+1 (829) 616-1616</strong>. Consulte nuestra <a href="https://dgmax.do/politica-de-reembolsos" style="color:#14b8a6;">Política de reembolsos y cancelaciones</a>.
+    </div>
+
+    <div class="footer">
+        Almax Solutions EIRL &middot; RNC 133-60158-3 &middot; Punta Cana, República Dominicana &middot; soporte@dgmax.do &middot; dgmax.do
+    </div>
+
+</div>
+
+</body>
+</html>

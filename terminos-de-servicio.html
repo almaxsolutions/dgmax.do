@@ -348,7 +348,7 @@
                 <h2 id="pagos">5. Pagos y Facturación</h2>
 
                 <h3>5.1 Planes y Precios</h3>
-                <p>DGMax ofrece diferentes planes de servicio con características y precios publicados en nuestro sitio web. Los precios están expresados en dólares estadounidenses (USD) e incluyen el ITBIS aplicable.</p>
+                <p>DGMax ofrece diferentes planes de servicio con características y precios publicados en nuestro sitio web. Los cargos a tarjetas de crédito o débito se procesan en <strong>pesos dominicanos (RD$/DOP)</strong> e incluyen el ITBIS aplicable. Los precios mostrados en nuestra página de planes pueden presentarse en pesos dominicanos o en dólares estadounidenses como referencia; el cargo efectivo se realiza en la moneda indicada al momento de confirmar la compra.</p>
 
                 <h3>5.2 Ciclo de Facturación</h3>
                 <ul>
@@ -358,13 +358,19 @@
                 </ul>
 
                 <h3>5.3 Métodos de Pago</h3>
-                <p>Los pagos se realizan mediante transferencia bancaria local. Los detalles de pago se proporcionan al momento de la facturación.</p>
+                <p>DGMax acepta los siguientes medios de pago:</p>
+                <ul>
+                    <li><strong>Transferencia bancaria local</strong> a la cuenta de Almax Solutions EIRL.</li>
+                    <li><strong>Tarjeta de crédito o débito</strong> (Visa, MasterCard), procesada a través de una pasarela de pagos certificada bajo el estándar PCI DSS con autenticación 3D Secure (Verified by Visa / MasterCard ID Check). DGMax no almacena el número de tarjeta ni el CVV.</li>
+                </ul>
+                <p>Los detalles de pago se proporcionan al momento de la facturación.</p>
 
                 <h3>5.4 Política de Reembolso</h3>
+                <p>El detalle completo de reembolsos, cancelaciones y entrega del servicio está disponible en la <a href="/politica-de-reembolsos" class="text-amber-400 hover:text-amber-300 underline">Política de Reembolsos y Cancelaciones</a>. Resumen:</p>
                 <ul>
-                    <li><strong>Período de prueba:</strong> Sin compromiso, puede cancelar en cualquier momento</li>
-                    <li><strong>Planes mensuales:</strong> No se ofrecen reembolsos por períodos parciales</li>
-                    <li><strong>Planes anuales:</strong> Reembolso proporcional dentro de los primeros 30 días</li>
+                    <li><strong>Período de prueba:</strong> 14 días sin compromiso, sin tarjeta de crédito.</li>
+                    <li><strong>Planes mensuales:</strong> Cancelables en cualquier momento sin penalidad; el servicio permanece activo hasta el final del ciclo pagado. No se reembolsan ciclos ya consumidos.</li>
+                    <li><strong>Planes anuales:</strong> Cancelables en cualquier momento; el servicio continúa hasta el final del mes en curso y se reembolsan los meses completos no utilizados a la tarifa mensual prepagada.</li>
                 </ul>
 
                 <h3>5.5 Cambios de Precio</h3>
@@ -514,7 +520,7 @@
 
                 <hr>
 
-                <p class="text-center text-gray-500">© 2025 AlMax Solutions EIRL. Todos los derechos reservados.</p>
+                <p class="text-center text-gray-500">© 2026 AlMax Solutions EIRL. Todos los derechos reservados.</p>
 
             </div>
         </div>
@@ -522,8 +528,8 @@
 
     <!-- Footer -->
     <footer class="border-t border-white/5 bg-midnight-900">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 space-y-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
                 <a href="/" class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
                         <svg class="w-6 h-6 text-midnight-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -532,8 +538,24 @@
                     </div>
                     <span class="font-display text-xl font-bold">DGMax</span>
                 </a>
-                <p class="text-gray-500 text-sm">© 2025 DGMax. Todos los derechos reservados.</p>
-                <a href="/" class="text-gray-400 hover:text-amber-400 transition-colors">Volver al inicio</a>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <a href="/terminos-de-servicio" class="text-gray-400 hover:text-amber-400 transition-colors">Términos de Servicio</a>
+                    <a href="/politica-de-privacidad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Privacidad</a>
+                    <a href="/politica-de-seguridad" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Seguridad</a>
+                    <a href="/politica-de-reembolsos" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Reembolsos</a>
+                        <a href="/politica-de-reembolsos#entrega" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Entrega</a>
+                    <a href="/politica-de-contingencia" class="text-gray-400 hover:text-amber-400 transition-colors">Política de Contingencia</a>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <img src="/assets/badges/visa.jpg" alt="Visa" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard.jpg" alt="MasterCard" class="h-7 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/visa-secure.png" alt="Verified by Visa" class="h-8 bg-white rounded px-1.5 py-0.5">
+                    <img src="/assets/badges/mastercard-id-check.png" alt="MasterCard ID Check" class="h-8 bg-white rounded px-1.5 py-0.5">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2 pt-5 border-t border-white/5 text-xs text-gray-500">
+                <p>&copy; 2026 Almax Solutions EIRL. Todos los derechos reservados.</p>
+                <p>Pagos seguros · Autenticación 3D Secure en cada transacción</p>
             </div>
         </div>
     </footer>
