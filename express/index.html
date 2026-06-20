@@ -1264,6 +1264,37 @@
                 nav.classList.remove('bg-midnight-900/90');
             }
         });
+
+        // Carry Google Ads click id into the signup URL so the source of a
+        // completed registration can be reconciled later (attribution during
+        // validation). Persisting it on the lead is done on the signup side.
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            ['gclid', 'gbraid', 'wbraid'].forEach(function (key) {
+                var val = params.get(key);
+                if (!val) return;
+                document.querySelectorAll('a[href*="/express/signup"]').forEach(function (cta) {
+                    var url = new URL(cta.href);
+                    if (!url.searchParams.has(key)) {
+                        url.searchParams.set(key, val);
+                        cta.href = url.toString();
+                    }
+                });
+            });
+        })();
+
+        // Track signup CTA clicks (GA4).
+        document.querySelectorAll('a[href*="/express/signup"]').forEach(cta => {
+            cta.addEventListener('click', function () {
+                var plan = (this.href.match(/[?&]plan=([^&]+)/) || [])[1] || 'unknown';
+                if (typeof gtag === 'function') {
+                    gtag('event', 'express_signup_cta_click', {
+                        plan: plan,
+                        link_url: this.href
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
